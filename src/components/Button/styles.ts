@@ -31,7 +31,7 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonStyleProps>`
 `;
 
 export const BtnText = styled(HighlightText)<{ type: ButtonType }>`
-  font-size: ${({ theme }) => theme.FONT_SIZE.sm};
+  font-size: ${({ theme }) => theme.FONT_SIZE.sm}px;
   color: ${({ theme, type }) =>
     type === 'primary' ? theme.COLORS.WHITE : theme.COLORS.GRAY_700};
 `;

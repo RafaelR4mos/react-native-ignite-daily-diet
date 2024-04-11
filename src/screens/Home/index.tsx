@@ -7,8 +7,10 @@ import { MealListItem } from '../../components/MealListItem';
 import { MealDate } from '../../components/MealListItem/styles';
 import { useState } from 'react';
 import { MealList } from '../../@types/intefaces';
+import { useNavigation } from '@react-navigation/native';
 
 export function Home() {
+  const navigation = useNavigation();
   const [mealList, setMealList] = useState<MealList[]>([
     {
       id: 'kldfdkjfdjdf11111',
@@ -76,6 +78,7 @@ export function Home() {
           title="Nova refeição"
           icon="add"
           style={{ marginBottom: 32 }}
+          onPress={() => navigation.navigate('newMeal')}
         />
 
         <SectionList
